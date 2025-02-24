@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WpfApp10" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBox x:Name="ForbiddenWordsTextBox" Grid.Row="0" Margin="10" Height="100" AcceptsReturn="True"/>
+        <Button x:Name="LoadWordsButton" Grid.Row="1" Content="Load Words from File" Margin="10" Click="LoadWordsButton_Click"/>
+
+        <TextBox x:Name="FilePathTextBox" Grid.Row="2" Margin="10" Height="30" AcceptsReturn="True"/>
+        
+        <Button x:Name="StartButton" Grid.Row="3" Content="Start" Margin="10" Click="StartButton_Click"/>
+
+        <ProgressBar x:Name="OverallProgressBar" Grid.Row="4" Margin="10" Height="20" Minimum="0" Maximum="100"/>
+        <ListBox x:Name="FilePathListBox" Grid.Row="5" Margin="10"/>
+        <TextBlock x:Name="StatusTextBlock" Grid.Row="6" Margin="10" Text="Status: Idle"/>
+    </Grid>
+</Window>
